@@ -1,0 +1,11 @@
+1.指定编译套件   cmake .. -G“编译器” 
+
+2.指定mingw并编译动态库 cmake .. -G"MinGW Makefiles" -DBUILD_SHARED_LIBS=true    
+
+3.cmake 编译windows release 版本
+在win上编译程序 使用
+cmake --build . --config Release
+可以指向release版本，否则默认debug输出
+在linux上
+cmake 生成cache后 重新set
+cmake .. -DCMAKE_BUILD_TYPE=Release
